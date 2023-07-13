@@ -25,7 +25,7 @@ def plot_gaussians(X, mu1, sigma1, mu2, sigma2, prior1=0.5, prior2=0.5, N = 100,
     Z_1 = multivariate_normal.pdf(pos, mu1, sigma1) * prior1
     Z_2 = multivariate_normal.pdf(pos, mu2, sigma2) * prior2
     fig = plt.figure(figsize=(15,10))
-    ax = fig.gca(projection='3d')
+    ax = fig.add_subplot(projection='3d')
     cm1 = plt.cm.Reds
     cm2 = plt.cm.Blues
     ax.contourf(X1, X2, Z_1, 256, cmap = cm1)
